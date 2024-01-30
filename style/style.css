@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 50px;
+}
+.checkbox_1, .checkbox_2{
+    margin: 50px;  
+}
+
+.checkbox_1 input, .checkbox_2 input{
+    display: none;
+}
+
+.checkbox_1 label{
+    display: block;
+    width: 160px;
+    height: 50px;
+    color: #9c9c9c;
+    display: flex;
+    justify-content:space-around;
+    border: 1px solid #9c9c9c;
+    background-color: white;
+    transition:  color 0.5s;
+    position: relative;
+}
+.checkbox_1 label::after{
+    content: "ON";
+    color: white;
+    display: flex;
+    justify-content:center;
+    width: 78px;
+    height: 46px;
+    border: 1px solid #9c9c9c;
+    background-color: #9c9c9c;  
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(100%,0);
+    transition: content, border, background-color, transform;
+    transition: 1s;
+}
+.checkbox_1 input:checked+label{
+    border: 1px solid #6fde5f;
+    color: #6fde5f;
+}
+.checkbox_1 input:checked+label::after{
+    content: "OFF";
+    border: 1px solid #6fde5f;
+    background-color: #6fde5f;  
+    transform: translate(0,0);
+}
+
+.checkbox_2 label{
+    display: block;
+    width: 120px;
+    height: 50px;
+    border: 1px solid #c4c3c3;
+    background-color: white;
+    position: relative;
+}
+.checkbox_2 label::after{
+    content: "Откл";
+    font-size: 20px;
+    display: flex;
+    justify-content:center;
+    width: 78px;
+    height: 46px;
+    border: 1px solid #c4c3c3;
+    background-color: #dddddd;  
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50%,0);
+    transition: content, border, background-color, transform;
+    transition-duration: 1s;
+}
+.checkbox_2 input:checked+label{
+    border: 1px solid rgb(185, 151, 65);
+}
+.checkbox_2 input:checked+label::after{
+    content: "Вкл";
+    border: 1px solid rgb(185, 151, 65);
+    background-color: #f4d461;  
+    transform: translate(0,0);
+}
+
+
